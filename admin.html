@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Frici Admin – Járatok kezelése</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">✈️ Frici Admin</div>
+    <nav>
+      <a href="index.html">← Vissza az utas oldalra</a>
+    </nav>
+  </header>
+
+  <main class="admin-panel">
+    <h2>Új járat létrehozása</h2>
+
+    <div class="form-grid">
+      <input type="text" id="from" placeholder="Honnan?" required />
+      <input type="text" id="to" placeholder="Hová?" required />
+      <input type="date" id="date" required />
+
+      <select id="travelClass" required>
+        <option value="" disabled selected>Osztály</option>
+        <option value="economy">Economy</option>
+        <option value="business">Business</option>
+      </select>
+
+      <select id="aircraft" required>
+        <!-- Géptípusok dinamikusan töltődnek be JS-ből -->
+      </select>
+
+      <button id="addFlightBtn">Járat hozzáadása</button>
+    </div>
+
+    <h3>Mentett járatok</h3>
+    <ul id="flightListAdmin" class="flight-list"></ul>
+  </main>
+
+  <footer>
+    &copy; 2025 Frici Airlines – Admin felület
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<h3>Eladott jegyek</h3>
+<ul id="ticketListAdmin"></ul>

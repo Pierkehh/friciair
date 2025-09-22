@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Frici Airlines</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">✈ Frici</div>
+    <nav>
+      <a href="#">Kezdőlap</a>
+      <a href="#">Járatok</a>
+      <a href="#">Rólunk</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Fedezd fel a világot a Frici-vel!</h1>
+    <p>Egyszerű foglalás, elérhető árak, megbízható utazás.</p>
+  </section>
+<section id="flights" class="flight-results">
+  <h2>Elérhető járatok</h2>
+  
+  <!-- Kereső -->
+  <div class="search-bar">
+    <input type="text" id="searchFrom" placeholder="Honnan?" />
+    <input type="text" id="searchTo" placeholder="Hová?" />
+    <input type="date" id="searchDate" />
+    <button id="searchBtn">Keresés</button>
+    <button id="resetBtn">Összes</button>
+  </div>
+
+  <ul id="flightList">
+    <!-- Ide kerülnek a járatok JavaScript-ből -->
+  </ul>
+</section>
+
+  <!-- Jegyvásárlási modal -->
+  <div id="ticketModal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Jegyvásárlás</h3>
+      <form id="ticketForm">
+        <input type="text" id="buyerName" placeholder="Név" required />
+        <input type="number" id="ticketCount" placeholder="Jegyek száma" min="1" value="1" required />
+        <button type="submit">Vásárlás</button>
+        <button type="button" id="cancelBtn">Mégse</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Frici Airlines. Minden jog fenntartva.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
